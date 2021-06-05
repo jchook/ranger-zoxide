@@ -17,9 +17,19 @@ Easily jump between commonly visited directories by running this in ranger:
 
 ## Install
 
-Simply copy `zoxide.py` to your `~/.config/ranger/plugins` folder. For example:
+For ranger >= 1.9.3, use Git to clone this repository into your
+`~/.config/ranger/plugins` folder. For example:
 
+```sh
+git clone git@github.com:jchook/ranger-zoxide.git ~/.config/ranger/plugins/zoxide
 ```
+
+**Legacy Install**
+
+For ranger versions older than 1.9.3, or to install without Git, download
+`__init__.py` to your `~/.config/ranger/plugins` directory. For example:
+
+```sh
 mkdir -p ~/.config/ranger/plugins
 wget -O ~/.config/ranger/plugins/zoxide.py https://raw.githubusercontent.com/jchook/ranger-zoxide/master/zoxide.py
 ```
