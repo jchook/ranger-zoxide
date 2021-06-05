@@ -15,13 +15,12 @@ Easily jump between commonly visited directories by running this in ranger:
 - Supports tab completion
 - Works with Python >= 2.7, or >= 3.1
 
-## Install
+## Install via Git
 
-Simply copy `zoxide.py` to your `~/.config/ranger/plugins` folder. For example:
+Clone this repository into your `~/.config/ranger/plugins` folder. For example:
 
-```
-mkdir -p ~/.config/ranger/plugins
-wget -O ~/.config/ranger/plugins/zoxide.py https://raw.githubusercontent.com/jchook/ranger-zoxide/master/zoxide.py
+```sh
+git clone git@github.com:jchook/ranger-zoxide.git ~/.config/ranger/plugins/zoxide
 ```
 
 ## Keyboard Shortcut
