@@ -15,17 +15,18 @@ Easily jump between commonly visited directories by running this in ranger:
 - Supports tab completion
 - Works with Python >= 2.7, or >= 3.1
 
-## Install via Git
+## Install
 
-Clone this repository into your `~/.config/ranger/plugins` folder. For example:
+For ranger >= 1.9.3, use Git to clone this repository into your
+`~/.config/ranger/plugins` folder. For example:
 
 ```sh
 git clone git@github.com:jchook/ranger-zoxide.git ~/.config/ranger/plugins/zoxide
 ```
 
-## Install without Git
+**Legacy Install**
 
-For ranger versions older than 1.9.3, or to install without Git, simply download
+For ranger versions older than 1.9.3, or to install without Git, download
 `__init__.py` to your `~/.config/ranger/plugins` directory. For example:
 
 ```sh
