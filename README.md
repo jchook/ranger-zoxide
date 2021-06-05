@@ -23,6 +23,16 @@ Clone this repository into your `~/.config/ranger/plugins` folder. For example:
 git clone git@github.com:jchook/ranger-zoxide.git ~/.config/ranger/plugins/zoxide
 ```
 
+## Install without Git
+
+For ranger versions older than 1.9.3, or to install without Git, simply download
+`__init__.py` to your `~/.config/ranger/plugins` directory. For example:
+
+```sh
+mkdir -p ~/.config/ranger/plugins
+wget -O ~/.config/ranger/plugins/zoxide.py https://raw.githubusercontent.com/jchook/ranger-zoxide/master/zoxide.py
+```
+
 ## Keyboard Shortcut
 
 You may wish to add a keyboard shortcut to quickly `z` between common
