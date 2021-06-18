@@ -45,7 +45,6 @@ map cz console z%space
 
 ## See Also
 
-- [zoxide/contrib/ranger.py](https://github.com/ajeetdsouza/zoxide/blob/master/contrib/ranger.py)
 - [ranger-zjumper](https://github.com/ask1234560/ranger-zjumper).
 
 ## License
