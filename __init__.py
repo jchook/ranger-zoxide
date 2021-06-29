@@ -2,15 +2,13 @@ import os.path
 import ranger.api
 import ranger.core.fm
 import ranger.ext.signals
-from subprocess import Popen, PIPE
+from subprocess import Popen, PIPE, run
 
 hook_init_prev = ranger.api.hook_init
 
 def hook_init(fm):
     def zoxide_add(signal):
-        path = signal.new.path
-        process = Popen(["zoxide", "add", path])
-        process.wait()
+        Popen(["zoxide", "add", signal.new.path])
 
     fm.signal_bind("cd", zoxide_add)
     fm.commands.alias("zi", "z -i")
