@@ -26,17 +26,22 @@ class z(ranger.api.commands.Command):
     """
     def execute(self):
         results = self.query(self.args[1:])
+        if not results:
+            return
+
         if os.path.isdir(results[0]):
             self.fm.cd(results[0])
 
     def query(self, args):
         try:
-            p = Popen(
-                ["zoxide", "query"] + self.args[1:],
-                stdout=PIPE,
-                stderr=PIPE
+            p = self.fm.execute_command("zoxide query {}".format(" ".join(self.args[1:])),
+                stdout=PIPE
             )
             stdout, stderr = p.communicate()
+
+            if not stdout:
+                return None
+
             if p.returncode == 0:
                 output = stdout.decode("utf-8").strip()
                 if output:
