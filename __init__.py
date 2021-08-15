@@ -13,6 +13,7 @@ def hook_init(fm):
         process.wait()
 
     fm.signal_bind("cd", zoxide_add)
+    fm.commands.alias("zi", "z -i")
     return hook_init_prev(fm)
 
 
@@ -57,3 +58,4 @@ class z(ranger.api.commands.Command):
     def tab(self, tabnum):
         results = self.query(self.args[1:])
         return ["z {}".format(x) for x in results]
+
