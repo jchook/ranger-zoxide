@@ -9,6 +9,12 @@ Easily jump between commonly visited directories by running this in ranger:
 :z <partial-name>
 ```
 
+Or use interactive mode:
+
+```
+:zi <partial-name>
+```
+
 ## Features
 
 - Very simple &amp; fast thanks to zoxide
@@ -41,6 +47,12 @@ directories. Simply add a binding to your `~/.config/ranger/rc.conf` file:
 
 ```
 map cz console z%space
+```
+
+Or for interactive use:
+
+```
+map cz zi
 ```
 
 ## See Also
