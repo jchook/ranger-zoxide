@@ -25,6 +25,12 @@ class z(ranger.api.commands.Command):
     """
     def execute(self):
         results = self.query(self.args[1:])
+
+        input_path = ' '.join(self.args[1:])
+        if not results and os.path.isdir(input_path):
+            self.fm.cd(input_path)
+            return
+
         if not results:
             return
 
