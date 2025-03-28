@@ -39,9 +39,8 @@ class z(ranger.api.commands.Command):
 
     def query(self, args):
         try:
-            zoxide = self.fm.execute_command(f"zoxide query --exclude \"$PWD\" {' '.join(self.args[1:])}",
-                                             stdout=PIPE
-                                             )
+            zoxide = self.fm.execute_command(["zoxide", "query", "--exclude", self.fm.thisdir.path, *self.args[1:]],
+                                             stdout=PIPE)
             stdout, stderr = zoxide.communicate()
 
             if zoxide.returncode == 0:
