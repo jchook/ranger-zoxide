@@ -24,7 +24,11 @@ class z(ranger.api.commands.Command):
     Jump around with zoxide (z)
     """
     def execute(self):
-        results = self.query(self.args[1:])
+        results = None
+        if len(self.args) == 1:
+            results = [self.fm.home_path]
+        else:
+            results = self.query(self.args[1:])
 
         input_path = ' '.join(self.args[1:])
         if not results and os.path.isdir(input_path):
